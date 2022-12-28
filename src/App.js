@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from'react'
+import 'bootstrap/dist/css/bootstrap-reboot.min.css'
 import './App.css';
+import Navbar from './compo/Navbar';
+import Next from './compo/Next';
+import Dashbord from './compo/Dashbord';
+import Graph from './compo/Graph';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div id='wrapper'>
+    <Navbar/>
+    <div id='content-wrapper' className='d-flex flex-column'>
+      <div id='content'>
+      <Next/>
+      <div class='container-fluid'>
+        <Dashbord/>
+        <Graph/>
+      </div>
     </div>
+    </div>
+    </div>
+    
+    
+    </>
   );
 }
 
